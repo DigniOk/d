@@ -1,4 +1,5 @@
-﻿Console.Write("Введите число или слово через запятую: ");
+﻿//Написать программу которая из имеющегося массива строк длина которых меньше или равна 3 символа
+Console.Write("Введите число или слово через запятую: ");
 string[] TextArray = Console.ReadLine().Split(',');
 string[] NewTextArray = new string[TextArray.Length];
 void ArraySearch(string[] TextArray, string[] NewTextArray)
@@ -13,3 +14,14 @@ void ArraySearch(string[] TextArray, string[] NewTextArray)
         }
     }
 }
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {   
+        Console.Write($"{array[i]}");
+    }
+    Console.WriteLine();
+}
+ArraySearch(TextArray, NewTextArray);
+Console.Write("Массив из строк длина которых <=3 символа: ");
+PrintArray(NewTextArray);
