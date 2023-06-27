@@ -1,6 +1,7 @@
 package JAVA;
 import java.util.ArrayList;
 import java.util.Random;
+
 public class Home3 {
   
     public static void main(String[] args) {
@@ -15,6 +16,7 @@ public class Home3 {
                 if (list.get(i) < min) {
                     min = list.get(i);
              }
+
         }
 
       System.out.println("Минимальное значениe = "+min);  

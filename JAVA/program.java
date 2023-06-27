@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Random;
-
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.Scanner;
+import java.util.Stack;
 // /**
 //  * program
 //  */
@@ -372,3 +377,196 @@ import java.util.Random;
 //       System.out.println("Минимальное значениe = "+min);  
 //     }
 // }
+
+
+
+// //Создать словарь. Ключ число, значение случайное число. Вывести пары в консоль
+//  public class program {
+//     public static void main(String[] args) {
+//         Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
+//         for (int i = 0; i < 10; i++) {
+//                 mp.put(i, new Random().nextInt(10));
+//         }
+//         for (var it : mp.entrySet())
+//              System.out.println((it.getKey())+" "+it.getValue());
+//      }
+
+// }
+// //Создать словарь. Ключ число, значение случайное число. Вывести пары в который
+// //значение кратно 3 и не пользуясь методом EntrySet
+// public class program {
+//         public static void main(String[] args) {
+//                 Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
+//                 for (int i = 0; i < 10; i++) {
+//                         mp.put(i, new Random().nextInt(10));
+//                 }
+                
+                
+//                 for (int key: mp.keySet()) {
+//                         if (mp.get(key) % 3 == 0){
+//                         System.out.println(key + ": " + mp.get(key));
+//                         }
+//                 }
+                
+//         }
+// }
+// //Создать два словаря. Ключи - случайные числа, значение для первого словаря
+// // мужские имена, а словарь воторой женские имена. Вывести мужские и женские имена
+// //только если в обоих словарях есть соответствующий ключ.
+
+// public class program {
+//         public static void main(String[] args) {
+//                 Map<Integer, String> man = new HashMap<Integer, String>();
+//                 for (int i = 0; i < 4; i++) {
+//                         Scanner iScanner = new Scanner(System.in);
+//                         System.out.println("Введите мужское имя: ");
+//                         String name = iScanner.nextLine();
+//                         man.putIfAbsent(new Random().nextInt(10), name);
+//                 }
+
+//                 Map<Integer, String> women = new HashMap<Integer, String>();
+//                 for (int i = 0; i < 4; i++) {
+//                         Scanner iScanner = new Scanner(System.in);
+//                         System.out.println("Введите женское имя: ");
+//                         String name = iScanner.nextLine();
+//                         women.putIfAbsent(new Random().nextInt(10), name);
+//                 }
+//                 for (var item : man.entrySet()) {
+//                         System.out.println(item.getKey() + " " + item.getValue());         
+//                 }
+//                 System.out.println();
+//                 for (var item : women.entrySet()) {
+//                         System.out.println(item.getKey() + " " + item.getValue());
+                        
+//                 }
+//                 for (int key : man.keySet()) {
+//                         if (women.containsKey(key)) {
+//                                 System.out.println(key + " " + man.get(key) + " " + women.get(key));
+//                         }
+//                 }
+
+//         }
+// }
+
+// //Создать словарь. Ключ индекс, значение случайное число. Заменить значения их квадрами.
+//  public class program {
+//     public static void main(String[] args) {
+//         Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
+//         for (int i = 0; i < 10; i++) {
+//                 mp.put(i, new Random().nextInt(10));
+//         }
+//         System.out.println(mp);
+//         for (int i = 0; i < mp.size(); i++) {
+//                 mp.replace(i, mp.get(i)*mp.get(i));
+//         }
+//         System.out.println(mp);
+//      }
+//  }
+
+// //Реализовать предыдущие задание без циклов
+
+//  public class program {
+//     public static void main(String[] args) {
+//         Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
+//         for (int i = 0; i < 10; i++) {
+//                 mp.put(i, new Random().nextInt(10));
+//         }
+//         System.out.println(mp);
+//         mp.forEach((k,v) -> {
+//                 mp.replace(k, v*v);
+//                 System.out.println(mp.get(k));               
+//         });
+//         System.out.println(mp);
+//     }
+// }
+
+// //Реализовать предыдущие задание без циклов и forEach.
+//  public class program {
+//     public static void main(String[] args) {
+//         Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
+//         for (int i = 0; i < 10; i++) {
+//                 mp.put(i, new Random().nextInt(10));
+//         }
+//         mp.replaceAll((k, v) -> (v * v));
+//         System.out.println(mp);    
+//     }
+// }
+
+public class program {
+
+        static void sortedPrint(Map<String, ArrayList> map) {
+
+                Set<String> keySet = map.keySet();
+                int maxCount = 0;
+                int minCount = 1_000_000;
+
+                for (var item : map.entrySet()) {
+                        if (maxCount < item.getValue().size())
+                                maxCount = item.getValue().size();
+                        if (minCount > item.getValue().size())
+                                minCount = item.getValue().size();
+
+                }
+
+                Stack<String> st = new Stack<>();
+                int num = minCount;
+                while (num <= maxCount) {
+                        for (var item : map.entrySet()) {
+                                if (item.getValue().size() == num) {
+                                        st.push(item.getKey());
+                                }
+                        }
+                        num += 1;
+                }
+                String name;
+                for (int i = 0; i < keySet.size(); i++) {
+                        name = st.pop();
+                        for (var item : map.entrySet()) {
+                                if (name == item.getKey()) {
+                                        System.out.printf("%8s: ", item.getKey());
+                                        System.out.println(item.getValue());
+                                }
+                        }
+                }
+                System.out.println();
+        }
+        
+        public static void main(String[] args) {
+                Map<String, ArrayList> contact = new HashMap<>() {
+                        {
+                                put("Крапивин", new ArrayList<Integer>() {
+                                        {
+                                                add(534534534);
+                                                add(534534534);
+                                                add(756756756);
+                                        }
+                                });
+                                put("Антонов", new ArrayList<Integer>() {
+                                        {
+                                                add(454543534);
+                                        }
+                                });
+                                put("Петров", new ArrayList<Integer>() {
+                                        {
+                                                add(444444446);
+                                                add(232377878);
+
+                                        }
+                                });
+                                put("Иванов", new ArrayList<Integer>() {
+                                        {
+                                                add(886644878);
+                                                add(555222878);
+                                                add(182830767);
+                                                add(999999767);
+                                        }
+                                });
+                        }
+                };
+                System.out.println("Справочник: ");
+                sortedPrint(contact);
+        }
+}
+
+
+
