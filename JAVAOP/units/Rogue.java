@@ -1,16 +1,14 @@
-package JAVAOP;
+package JAVAOP.units;
 
 public class Rogue extends Warrior {
-    public Rogue(String name) {
-        super(4, 100, name, "Rogue", 3, 1, 4, 2,5);
+    public Rogue(String name, int x, int y) {
+        super(4, 100, name, "Rogue", 3, 1, x, y, 5, 3, 4);
     }
-    @Override
-    public void step(){
-    }
+   
     @Override
     public String getInfo() {
         return "NAME - " + name + " " + "TYPE - " + type + " " + "ID - " + id + " " + 
         "HEALTH - " + healthlevel + " " + "ATACK - " + atackLevelBase + " " + "Initiative - " + initiative + " " 
-        + "MAXD - " + maxDamage + " " + "MIND - " + minDamage + " " + "SPEED - " + speed;
+        + "MAXD - " + maxDamage + " " + "MIND - " + minDamage + " " + "SPEED - " + speed + " " + "X - " + place.x + " " + "Y - " + place.y;
     }
 }

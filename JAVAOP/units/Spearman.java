@@ -1,17 +1,15 @@
-package JAVAOP;
+package JAVAOP.units;
 
 public class Spearman  extends Warrior{
-    public Spearman(String name) {
-        super(5, 100, name, "Rogue", 4, 2, 5, 3, 2);
+    public Spearman(String name, int x, int y) {
+        super(5, 100, name, "Rogue", 4, 2, x,  y, 2, 1, 1);
     }
-    @Override
-    public void step(){
-    }
+ 
     @Override
     public String getInfo() {
         return "NAME - " + name + " " + "TYPE - " + type + " " + "ID - " + id + " " + 
         "HEALTH - " + healthlevel + " " + "ATACK - " + atackLevelBase + " " + "Initiative - " + initiative + " " 
-        + "MAXD - " + maxDamage + " " + "MIND - " + minDamage + " " + "SPEED - " + speed;
+        + "MAXD - " + maxDamage + " " + "MIND - " + minDamage + " " + "SPEED - " + speed + " " + "X - " + place.x + " " + "Y - " + place.y;
     }
     
 }
