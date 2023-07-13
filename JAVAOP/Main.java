@@ -7,11 +7,13 @@ import JAVAOP.units.Bowman;
 import JAVAOP.units.Monarch;
 import JAVAOP.units.Monk;
 import JAVAOP.units.Names;
+import JAVAOP.units.Peasant;
 import JAVAOP.units.Rogue;
 import JAVAOP.units.Sniper;
 import JAVAOP.units.Spearman;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Main {
     private static String getNames() {
@@ -44,6 +46,9 @@ public class Main {
                 case 5:
                     light.add(new Spearman(getNames(), 0, y));
                     break;
+                case 6:
+                    light.add(new Peasant(getNames(), 0, y));
+                    break;
                 default:
                     light.add(new Monk(getNames(), 0, y));
             }
@@ -70,17 +75,35 @@ public class Main {
                 case 5:
                     dark.add(new Spearman(getNames(), 9, y));
                     break;
+                case 6:
+                    dark.add(new Peasant(getNames(), 9, y));
+                    break;    
                 default:
                     dark.add(new Monk(getNames(), 9, y));
             }
         }
+
+        ArrayList<BasicHero> UnitedTeam = new ArrayList<>();
+        UnitedTeam.addAll(light);
+        UnitedTeam.addAll(dark);
+        UnitedTeam.sort((o1, o2) -> o2.getInitiative()-o1.getInitiative()); 
+
         System.out.println("Команда Light:");
         light.forEach(NewHeroLight -> System.out.println(NewHeroLight.getInfo()));
         System.out.println("Команда Dark:");
         dark.forEach(NewHeroDark -> System.out.println(NewHeroDark.getInfo()));
-        System.out.println("Light enemy ");
-        light.forEach(n->n.step(dark));
-        System.out.println("Dark enemy ");
-        dark.forEach(n->n.step(light));
+        
+        for(BasicHero item: UnitedTeam) {
+            if (light.contains(item)) {
+                item.step(dark, light);
+            } else {
+            item.step(light, dark);
+            }
+            System.out.println(item.getInitiative());
+        }
+
+        System.out.println("-".repeat(150));
+        light.forEach(NewHeroLight -> System.out.println(NewHeroLight.getInfo()));
+        dark.forEach(NewHeroDark -> System.out.println(NewHeroDark.getInfo()));
     }
 }

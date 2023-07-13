@@ -10,8 +10,10 @@ public abstract class Wizard extends BasicHero {
     public int heal;
 
     @Override
-    public void step(ArrayList<BasicHero> enemy) {
-        int[] temp = findNearEnemy(enemy); 
-        System.out.println("LN - " + temp[0] + " " + "EnemyName - " + enemy.get(temp[1]).name);
+    public void step(ArrayList<BasicHero> enemy, ArrayList<BasicHero> ours) {
+        if (this.healthlevel == 0) return;
+        BasicHero temp = findNearEnemy(enemy); 
+        temp.healthlevel = temp.healthlevel - this.atackLevelBase;
+        
     }
 }

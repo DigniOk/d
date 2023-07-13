@@ -9,11 +9,15 @@ public abstract class BasicHero implements InGameInterface {
 
     String name;
 
-    String type;
+    protected String type;
 
     int atackLevelBase;
 
-    int initiative;
+    protected int initiative;
+    public int getInitiative() {
+        return initiative;
+    }
+    
 
     protected Cordinats place;
 
@@ -26,7 +30,7 @@ public abstract class BasicHero implements InGameInterface {
         this.initiative = initiative;
         place = new Cordinats(x, y);
     }
-    protected int[] findNearEnemy (ArrayList<BasicHero> enemy) {
+    protected BasicHero findNearEnemy (ArrayList<BasicHero> enemy) {
         double min = 1000;
         int count = 0;
         for (int i = 0; i < enemy.size(); i++) {
@@ -35,6 +39,6 @@ public abstract class BasicHero implements InGameInterface {
                 count = i;
             }
         }
-        return new int[] {(int) Math.round(min), count};
+        return enemy.get(count);
     }
 }

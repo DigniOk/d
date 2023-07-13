@@ -2,7 +2,7 @@ package JAVAOP.units;
 
 public class Monarch extends Wizard {
     public Monarch(String name, int x, int y) {
-        super(1, 100, name, "Monarch", 4, 6, 3, x, y);
+        super(1, 100, name, "Monarch", 2, 6, 3, x, y);
     }
   
     @Override

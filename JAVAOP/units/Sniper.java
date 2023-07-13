@@ -2,7 +2,7 @@ package JAVAOP.units;
 
 public class Sniper extends Shooter {
     public Sniper(String name, int x, int y) {
-        super(3, 100, name, "Sniper", 6, x, y, 5, 4, 15, 6, 5);
+        super(3, 100, name, "Sniper", 6, x, y, 7, 4, 15, 6, 5);
     }
   
     @Override

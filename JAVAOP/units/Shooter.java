@@ -16,8 +16,14 @@ public abstract class Shooter extends BasicHero {
     public int shots;
 
     @Override
-    public void step(ArrayList<BasicHero> enemy) {
-        int[] temp = findNearEnemy(enemy); 
-        System.out.println("LN - " + temp[0] + " " + "EnemyName - " + enemy.get(temp[1]).name);
+    public void step(ArrayList<BasicHero> enemy, ArrayList<BasicHero> ours) {
+        if (this.healthlevel == 0 || this.shots == 0) return;
+        BasicHero temp = findNearEnemy(enemy); 
+        temp.healthlevel = temp.healthlevel - this.atackLevelBase;
+        for (BasicHero item: ours) {
+            if (item.type.contains("Peasant")) return;
+        }
+        this.shots = this.shots - 1;
     }
 }
+
