@@ -30,6 +30,20 @@ public abstract class BasicHero implements InGameInterface {
         this.initiative = initiative;
         place = new Cordinats(x, y);
     }
+
+    public Cordinats getPlace() {
+        return place;
+    }
+
+    public float gethealthlevel() {
+        return healthlevel;
+    }
+
+    @Override
+    public String toString() {
+        return super.getClass().getSimpleName();
+    }
+
     protected BasicHero findNearEnemy (ArrayList<BasicHero> enemy) {
         double min = 1000;
         int count = 0;

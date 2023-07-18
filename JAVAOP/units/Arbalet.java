@@ -1,14 +1,13 @@
 package JAVAOP.units;
 
-public class Bowman extends Shooter {
-    public Bowman(String name, int x, int y) {
-        super(2, 100, name, "Bowman", 3, x, y, 7,  10);
+public class Arbalet extends Shooter {
+    public Arbalet(String name, int x, int y) {
+        super(3, 100, name, "Arbalet", 6, x , y, 6, 15 );
     }
-
+  
     // @Override
     // public String getInfo() {
     //     return " NAME - " + name + " " + "TYPE - " + type + " " + "ID - " + id + " " + "HEALTH - " + healthlevel + " " + "ATACK - " + atackLevelBase + " " + "Initiative - " + initiative + " " + "MAXD - " + maxDamage + " " + "MIND - " + minDamage + " " + "Range - " + range + " " + "Shots - " + shots + " " + "X - " + place.x + " " + "Y - " + place.y;
     // }
 }
     
-

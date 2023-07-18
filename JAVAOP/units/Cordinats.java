@@ -11,6 +11,6 @@ public double calcDistance (Cordinats point) {
       return Math.sqrt((dx*dx) + (dy*dy));
 
 }
-     int x;
-     int y;
+     public int x;
+     public int y;
 }
