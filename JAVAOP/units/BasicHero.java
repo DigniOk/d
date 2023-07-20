@@ -39,6 +39,13 @@ public abstract class BasicHero implements InGameInterface {
         return healthlevel;
     }
 
+    protected void getDamage (float damage) {
+        this.healthlevel = this.healthlevel - damage;
+        if (healthlevel <= 0) {
+            healthlevel = 0;
+        }
+    }
+
     @Override
     public String toString() {
         return super.getClass().getSimpleName();
@@ -48,7 +55,7 @@ public abstract class BasicHero implements InGameInterface {
         double min = 1000;
         int count = 0;
         for (int i = 0; i < enemy.size(); i++) {
-            if (place.calcDistance(enemy.get(i).place) < min){
+            if (place.calcDistance(enemy.get(i).place) < min & enemy.get(i).healthlevel > 0) {
                 min = place.calcDistance(enemy.get(i).place);
                 count = i;
             }

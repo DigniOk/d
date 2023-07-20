@@ -1,6 +1,7 @@
 package JAVAOP;
 
 import java.util.Random;
+import java.util.Scanner;
 
 import JAVAOP.units.BasicHero;
 import JAVAOP.units.Bowman;
@@ -87,22 +88,19 @@ public class Main {
         UnitedTeam.addAll(dark);
         UnitedTeam.sort((o1, o2) -> o2.getInitiative()-o1.getInitiative()); 
 
-        // System.out.println("Команда Light:");
-        // light.forEach(NewHeroLight -> System.out.println(NewHeroLight.getInfo()));
-        // System.out.println("Команда Dark:");
-        // dark.forEach(NewHeroDark -> System.out.println(NewHeroDark.getInfo()));
-        View.view();
-        for(BasicHero item: UnitedTeam) {
-            if (light.contains(item)) {
-                item.step(dark, light);
-            } else {
-            item.step(light, dark);
-            }
-            // System.out.println(item.getInitiative());
-        }
+        Scanner scan = new Scanner(System.in);
 
-        // System.out.println("-".repeat(150));
-        // light.forEach(NewHeroLight -> System.out.println(NewHeroLight.getInfo()));
-        // dark.forEach(NewHeroDark -> System.out.println(NewHeroDark.getInfo()));   
+        View.view();
+        while (true) {
+            scan.nextLine();
+            for(BasicHero item: UnitedTeam) {
+                if (light.contains(item)) {
+                    item.step(dark, light);
+                } else {
+                    item.step(light, dark);
+                }        
+            } 
+            View.view();  
+        } 
     }  
 }

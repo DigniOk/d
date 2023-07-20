@@ -10,7 +10,7 @@ public class Peasant extends BasicHero {
 
     @Override
     public void step(ArrayList<BasicHero> enemy, ArrayList<BasicHero> ours) {
-        if (this.healthlevel == 0) this.busy = false;
+        if (this.healthlevel <= 0) this.busy = false;
          
     
     }

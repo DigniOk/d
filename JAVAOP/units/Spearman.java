@@ -2,7 +2,7 @@ package JAVAOP.units;
 
 public class Spearman  extends Warrior{
     public Spearman(String name, int x, int y) {
-        super(5, 100, name, "Rogue", 4, 4, x,  y);
+        super(5, 100, name, "Rogue", 5, 4, x,  y);
     }
  
     // @Override

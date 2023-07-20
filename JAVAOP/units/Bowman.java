@@ -2,7 +2,7 @@ package JAVAOP.units;
 
 public class Bowman extends Shooter {
     public Bowman(String name, int x, int y) {
-        super(2, 100, name, "Bowman", 3, x, y, 7,  10);
+        super(2, 100, name, "Bowman", 9, x, y, 7,  30);
     }
 
     // @Override

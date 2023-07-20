@@ -2,7 +2,7 @@ package JAVAOP.units;
 
 public class Arbalet extends Shooter {
     public Arbalet(String name, int x, int y) {
-        super(3, 100, name, "Arbalet", 6, x , y, 6, 15 );
+        super(3, 100, name, "Arbalet", 10, x , y, 6, 25 );
     }
   
     // @Override
