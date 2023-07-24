@@ -2,7 +2,7 @@ package JAVAOP.units;
 
 public class HammerMonk extends Wizard {
     public HammerMonk(String name, int x, int y) {
-        super(1, 100, name, "HammerMonk", 5, 6, 3, x, y);
+        super(1, 100, name, "HammerMonk", 12, 6, 3, x, y);
     }
   
     // @Override

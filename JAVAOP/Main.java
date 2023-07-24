@@ -82,16 +82,21 @@ public class Main {
                     dark.add(new Monk(getNames(), 10, i));
             }
         }
-
+    
         
         UnitedTeam.addAll(light);
         UnitedTeam.addAll(dark);
         UnitedTeam.sort((o1, o2) -> o2.getInitiative()-o1.getInitiative()); 
-
+    
+        
         Scanner scan = new Scanner(System.in);
 
         View.view();
-        while (true) {
+        int DeadCountLight = 0;
+        int DeadCountDark = 0;
+        boolean EndGame = false;
+
+        while (!EndGame) {
             scan.nextLine();
             for(BasicHero item: UnitedTeam) {
                 if (light.contains(item)) {
@@ -100,7 +105,29 @@ public class Main {
                     item.step(light, dark);
                 }        
             } 
-            View.view();  
-        } 
+            View.view();
+            for (BasicHero item : light) {
+                if (item.gethealthlevel() <= 0) {
+                    DeadCountLight = DeadCountLight + 1;
+                }
+                if (DeadCountLight == light.size()) {
+                    System.out.println(AnsiColors.ANSI_BLUE + "Win team Dark(Blue)" + AnsiColors.ANSI_RESET);
+                    EndGame = true;
+                }
+            }
+            for (BasicHero item : dark) {
+                if (item.gethealthlevel() <= 0) {
+                    DeadCountDark = DeadCountDark + 1;
+                }
+                if (DeadCountDark == dark.size()) {
+                    System.out.println(AnsiColors.ANSI_GREEN + "Win team Light(Green)" + AnsiColors.ANSI_RESET);
+                    EndGame = true;
+                }
+            }
+            System.out.println(AnsiColors.ANSI_GREEN + "Dead in team Light(Green): " + DeadCountLight + " Kills: " + DeadCountDark + AnsiColors.ANSI_RESET);
+            System.out.println(AnsiColors.ANSI_BLUE + "Dead in team Dark(Blue): " + DeadCountDark + " Kills: " + DeadCountLight + AnsiColors.ANSI_RESET);
+            DeadCountLight = 0;
+            DeadCountDark = 0;
+        }   
     }  
 }
