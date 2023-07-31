@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.Arrays;
 // /**
 //  * program
 //  */
@@ -492,81 +493,167 @@ import java.util.Stack;
 //     }
 // }
 
-public class program {
+// public class program {
 
-        static void sortedPrint(Map<String, ArrayList> map) {
+//         static void sortedPrint(Map<String, ArrayList> map) {
 
-                Set<String> keySet = map.keySet();
-                int maxCount = 0;
-                int minCount = 1_000_000;
+//                 Set<String> keySet = map.keySet();
+//                 int maxCount = 0;
+//                 int minCount = 1_000_000;
 
-                for (var item : map.entrySet()) {
-                        if (maxCount < item.getValue().size())
-                                maxCount = item.getValue().size();
-                        if (minCount > item.getValue().size())
-                                minCount = item.getValue().size();
+//                 for (var item : map.entrySet()) {
+//                         if (maxCount < item.getValue().size())
+//                                 maxCount = item.getValue().size();
+//                         if (minCount > item.getValue().size())
+//                                 minCount = item.getValue().size();
 
-                }
+//                 }
 
-                Stack<String> st = new Stack<>();
-                int num = minCount;
-                while (num <= maxCount) {
-                        for (var item : map.entrySet()) {
-                                if (item.getValue().size() == num) {
-                                        st.push(item.getKey());
-                                }
-                        }
-                        num += 1;
-                }
-                String name;
-                for (int i = 0; i < keySet.size(); i++) {
-                        name = st.pop();
-                        for (var item : map.entrySet()) {
-                                if (name == item.getKey()) {
-                                        System.out.printf("%8s: ", item.getKey());
-                                        System.out.println(item.getValue());
-                                }
-                        }
-                }
-                System.out.println();
-        }
+//                 Stack<String> st = new Stack<>();
+//                 int num = minCount;
+//                 while (num <= maxCount) {
+//                         for (var item : map.entrySet()) {
+//                                 if (item.getValue().size() == num) {
+//                                         st.push(item.getKey());
+//                                 }
+//                         }
+//                         num += 1;
+//                 }
+//                 String name;
+//                 for (int i = 0; i < keySet.size(); i++) {
+//                         name = st.pop();
+//                         for (var item : map.entrySet()) {
+//                                 if (name == item.getKey()) {
+//                                         System.out.printf("%8s: ", item.getKey());
+//                                         System.out.println(item.getValue());
+//                                 }
+//                         }
+//                 }
+//                 System.out.println();
+//         }
         
-        public static void main(String[] args) {
-                Map<String, ArrayList> contact = new HashMap<>() {
-                        {
-                                put("Крапивин", new ArrayList<Integer>() {
-                                        {
-                                                add(534534534);
-                                                add(534534534);
-                                                add(756756756);
-                                        }
-                                });
-                                put("Антонов", new ArrayList<Integer>() {
-                                        {
-                                                add(454543534);
-                                        }
-                                });
-                                put("Петров", new ArrayList<Integer>() {
-                                        {
-                                                add(444444446);
-                                                add(232377878);
+//         public static void main(String[] args) {
+//                 Map<String, ArrayList> contact = new HashMap<>() {
+//                         {
+//                                 put("Крапивин", new ArrayList<Integer>() {
+//                                         {
+//                                                 add(534534534);
+//                                                 add(534534534);
+//                                                 add(756756756);
+//                                         }
+//                                 });
+//                                 put("Антонов", new ArrayList<Integer>() {
+//                                         {
+//                                                 add(454543534);
+//                                         }
+//                                 });
+//                                 put("Петров", new ArrayList<Integer>() {
+//                                         {
+//                                                 add(444444446);
+//                                                 add(232377878);
 
-                                        }
-                                });
-                                put("Иванов", new ArrayList<Integer>() {
-                                        {
-                                                add(886644878);
-                                                add(555222878);
-                                                add(182830767);
-                                                add(999999767);
-                                        }
-                                });
-                        }
-                };
-                System.out.println("Справочник: ");
-                sortedPrint(contact);
-        }
-}
+//                                         }
+//                                 });
+//                                 put("Иванов", new ArrayList<Integer>() {
+//                                         {
+//                                                 add(886644878);
+//                                                 add(555222878);
+//                                                 add(182830767);
+//                                                 add(999999767);
+//                                         }
+//                                 });
+//                         }
+//                 };
+//                 System.out.println("Справочник: ");
+//                 sortedPrint(contact);
+//         }
+// }
+
+// public class program {
+//     public static void main(String[] args) {
+//         Answer ans = new Answer();
+//         try {
+//             ans.arrayOutOfBoundsException();
+//         } catch (ArrayIndexOutOfBoundsException e) {
+//             System.out.println("Выход за пределы массива");
+//         }
+
+//         try {
+//             ans.divisionByZero();
+//         } catch (ArithmeticException e) {
+//             System.out.println("Деление на ноль");
+//         }
+
+//         try {
+//             ans.numberFormatException();
+//         } catch (NumberFormatException e) {
+//             System.out.println("Ошибка преобразования строки в число");
+//         }
+//     }
+// }
+// class Answer {
+//     public static void arrayOutOfBoundsException() {
+//         int [] mass = new int[3];
+//         mass[5] = 45;
+
+//         // Напишите свое решение ниже
+      
+      
+      
+// }
+
+//     public static void divisionByZero() {
+//         // Напишите свое решение ниже
+//       int b = 10 / 0;
+// }
+
+//     public static void numberFormatException() {
+//         // Напишите свое решение ниже
+//         int b = 10;
+//         b = Integer.parseInt("gfd");
+//  }
+// }
+
+// class Answer {
+//     public int[] subArrays(int[] a, int[] b){
+//        int[] zero = {};
+//        zero = new int[]{0};
+
+//       if (a.length != b.length) {
+//             return zero;
+//         }
+//         int[] result = new int[a.length];
+//         for (int i = 0; i < a.length; i++) {
+//             if (b[i] == 0)
+//                 throw new RuntimeException("Деление на нуль не допустимо!");
+//             result[i] = a[i] / b[i];
+//         }
+//         return result;
 
 
 
+       
+//     }
+// }
+
+// // Не удаляйте этот класс - он нужен для вывода результатов на экран и проверки
+// public class program{ 
+//     public static void main(String[] args) { 
+//       int[] a = {};
+//       int[] b = {};
+      
+//       if (args.length == 0) {
+//         // При отправке кода на Выполнение, вы можете варьировать эти параметры
+//         a = new int[]{3,3,3};
+//         b = new int[]{2,0,2};
+//       }
+//       else{
+//         a = Arrays.stream(args[0].split(", ")).mapToInt(Integer::parseInt).toArray();
+//         b = Arrays.stream(args[1].split(", ")).mapToInt(Integer::parseInt).toArray();
+//       }     
+      
+//       Answer ans = new Answer(); 
+//       String itresume_res = Arrays.toString(ans.subArrays(a, b));     
+//       System.out.println(itresume_res);
+//     }
+// }
