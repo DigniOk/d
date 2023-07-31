@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+    font-family: Family New;
+    src: url(../fonts/Oswald-Medium.ttf);
+}
+
+body{
+    background-color: sienna;
+    font-family: Roboto, sans-serif;
+    color:beige;
+}
+
+.header{
+    padding: 40px 0;
+}
+
+.special_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header .special_container{
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    vertical-align: bottom;
+    width: 75px;
+    height: 75px;
+}
+.main_title_header, .big_title {
+    font-family: Family New, sans-serif;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.menu{
+    margin-left: 250px;
+    display: flex;
+    list-style: none;
+}
+.menu_item{
+    margin-right: 50px ;
+}
+.menu_item a{
+    font-size: 14px;
+    color:beige;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu_item a:hover{
+    border-bottom:2px solid white ;
+}
+/*Конец блока header*/
+/*Начало блока Selection*/
+.main_content{
+    padding-top: 18px;
+    padding-bottom: 30px;
+}
+.main_content_info{
+    max-width: 1200px;
+}
+.content_title{
+    font-family: Family New, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+}
+.content_text{
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 56px;
+}
+.logo1{
+    vertical-align: bottom;
+    width: 150px;
+    height: 150px;
+}
+
+
+.card{
+    align-items: center;
+}
+
+.card-title{
+    color:black;
+}
+/*Конец блока Selection*/
+/*Начало блока Footer*/
+.footer{
+    padding: 20px 0;
+}
+.footer .special_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_info{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+.footer .up_link{
+    font-size: 14px;
+    line-height: 20px;
+}
+.footer .up_link #top {
+    background-color:black;
+}
+a{
+    color:white;
+    text-decoration: underline;
+}
+/*Конец блока Footer*/
