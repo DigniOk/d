@@ -1,0 +1,33 @@
+{
+    "products" : [
+        {
+            "nameprod" : "Яблоки",
+              "Weight" : 1000,
+           "prodgroup" : "Фрукты",
+               "price" : 150,
+    "number_warehouse" : 1
+        },
+        {
+            "nameprod" : "Картошка",
+              "Weight" : 5000,
+           "prodgroup" : "Овощи",
+               "price" : 320,
+    "number_warehouse" : 2
+        },
+        {
+            "nameprod" : "Бананы",
+              "Weight" : 1000,
+           "prodgroup" : "Фрукты",
+               "price" : 99,
+    "number_warehouse" : 1
+        },
+        {
+            "nameprod" : "Баунти мини",
+              "Weight" : 100,
+           "prodgroup" : "Кондитерские изделия",
+               "price" : 180,
+    "number_warehouse" : 3
+        }
+
+    ]
+}

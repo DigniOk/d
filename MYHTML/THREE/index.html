@@ -9,19 +9,21 @@
 </head>
 
 <body>
-    <script language = "JavaScript">
+    <script language="JavaScript">
         let a;
         function cinema(a) {
-            a = prompt("Введите мой любимый фильм");
-            if (a == "Человек паук") {
-            alert("Все верно, молодец/умница");
-            } else {
-            alert("Ошибка");
+            while (true) {
+                a = prompt("Введите мой любимый фильм");
+                if (a == "Человек паук") {
+                    alert("Все верно, молодец/умница");
+                    break;
+                } else {
+                    alert("Ошибка, повторите занова");
+                }
             }
-            return a;        
         }
         cinema(a);
-    
+
     </script>
 
 </body>

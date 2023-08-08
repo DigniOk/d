@@ -1,0 +1,49 @@
+<!-- <Catalog>
+
+    <Books>
+        <Name>Камил видит руками</Name>
+        <Autor>Томаш Малковски</Autor>
+        <Pages>146</Pages>
+        <Date>2019</Date>
+        <Price>863</Price>
+    </Books>
+     <Books>
+        <Name>Вероятности и неприятности</Name>
+        <Autor>Сергей Самойленко</Autor>
+        <Pages>134</Pages>
+        <Date>2022</Date>
+        <Price>	1055</Price>
+    </Books>
+     <Books>
+        <Name>Стратегии перемен</Name>
+        <Autor>Джон Коттер</Autor>
+        <Pages>102</Pages>
+        <Date>2022</Date>
+        <Price>1418</Price>
+    </Books>
+     <Books>
+        <Name>Когда жизнь сбивает с ног</Name>
+        <Autor>Расс Хэррис</Autor>
+        <Pages>80</Pages>
+        <Date>2021</Date>
+        <Price>945</Price>
+    </Books>
+     <Books>
+        <Name>Цветы в темноте</Name>
+        <Autor>Cестра Данг Нгием</Autor>
+        <Pages>124</Pages>
+        <Date>2020</Date>
+        <Price>	1027</Price>
+    </Books>
+  
+</Catalog> -->
+
+
+<doRegister>
+	<email>olga@gmail.com</email>
+	<name>Ольга</name>
+	<password>1</password>
+	<email>ivan@gmail.com</email>
+	<name>Иван</name>
+	<password>222</password>
+</doRegister>

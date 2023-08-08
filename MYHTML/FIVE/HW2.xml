@@ -1,0 +1,39 @@
+<Catalog>
+
+    <Films>
+        <Name>Легенда №17</Name>
+        <Autor>Николай Лебедев</Autor>
+        <Reputation>8.0</Reputation>
+        <Date>2012</Date>
+        <Theme>биография, спорт, драма</Theme>
+    </Films>
+     <Films>
+        <Name>Никогда не сдавайся</Name>
+        <Autor>Джефф Уодлоу</Autor>
+        <Reputation>7.6</Reputation>
+        <Date>2008</Date>
+        <Theme>боевик, спорт, драма</Theme>
+    </Films>
+     <Films>
+        <Name>Троя</Name>
+        <Autor>Вольфганг Петерсен</Autor>
+        <Reputation>8.0</Reputation>
+        <Date>2004</Date>
+        <Theme>боевик, история, драма, мелодрама</Theme>
+    </Films>
+     <Films>
+        <Name>Царство небесное</Name>
+        <Autor>Ридли Скотт</Autor>
+        <Reputation>7.6</Reputation>
+        <Date>2005</Date>
+        <Theme>боевик, драма, приключения, военный, история</Theme>
+    </Films>
+     <Films>
+        <Name>Человек-паук: Нет пути домой</Name>
+        <Autor>Джон Уоттс</Autor>
+        <Reputation>7.9</Reputation>
+        <Date>2021</Date>
+        <Theme>фантастика, боевик, приключения, фэнтези</Theme>
+    </Films>
+  
+</Catalog>
