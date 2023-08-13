@@ -1,0 +1,14 @@
+﻿Console.WriteLine("Введите X: ");
+double X = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите Y: ");
+double Y = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите Z: ");
+double Z = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите X2: ");
+double X2 = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите Y2: ");
+double Y2 = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите Z2: ");
+double Z2 = double.Parse(Console.ReadLine());
+double s = Math.Sqrt((X - X2)*(X - X2) + (Y - Y2)*(Y - Y2) + (Z - Z2)*(Z - Z2));
+Console.WriteLine($"s = {s:f2}");
