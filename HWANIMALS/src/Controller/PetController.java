@@ -1,12 +1,13 @@
-package HWANIMALS.ANIMALS.Controller;
+package HWANIMALS.src.Controller;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import HWANIMALS.ANIMALS.Exceptions.UncorrectDataException;
-import HWANIMALS.ANIMALS.Model.*;
-import HWANIMALS.ANIMALS.Services.IRepository;
-import HWANIMALS.ANIMALS.Services.PetRepository;
-import HWANIMALS.ANIMALS.UserInterface.*;
+
+import HWANIMALS.src.Exceptions.UncorrectDataException;
+import HWANIMALS.src.Model.*;
+import HWANIMALS.src.Services.IRepository;
+import HWANIMALS.src.Services.PetRepository;
+import HWANIMALS.src.UserInterface.*;
 
 public class PetController {
     private IRepository<Pet> petRepository;

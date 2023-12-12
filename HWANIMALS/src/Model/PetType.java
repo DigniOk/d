@@ -1,4 +1,4 @@
-package HWANIMALS.ANIMALS.Model;
+package HWANIMALS.src.Model;
 public enum PetType {
     
     Cat,

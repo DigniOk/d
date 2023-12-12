@@ -1,4 +1,4 @@
-package HWANIMALS.ANIMALS.UserInterface;
+package HWANIMALS.src.UserInterface;
 
 import java.util.List;
 

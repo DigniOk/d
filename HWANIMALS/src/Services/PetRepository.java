@@ -1,15 +1,17 @@
-package HWANIMALS.ANIMALS.Services;
+package HWANIMALS.src.Services;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import HWANIMALS.src.Model.*;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
-import HWANIMALS.ANIMALS.Model.*;
 
 
 public class PetRepository implements IRepository<Pet> {

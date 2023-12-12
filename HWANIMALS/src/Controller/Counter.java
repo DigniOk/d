@@ -1,4 +1,4 @@
-﻿package HWANIMALS.ANIMALS.Controller;
+﻿package HWANIMALS.src.Controller;
 
 public class Counter implements AutoCloseable {
 

@@ -1,8 +1,9 @@
-package HWANIMALS.ANIMALS.UserInterface;
+package HWANIMALS.src.UserInterface;
 
 import java.util.List;
 import java.util.Scanner;
-import HWANIMALS.ANIMALS.Model.*;
+
+import HWANIMALS.src.Model.*;
 
 public class ConsoleView implements View <Pet> {
 
