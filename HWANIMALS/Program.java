@@ -1,10 +1,10 @@
 package HWANIMALS;
 
-import HWANIMALS.src.Controller.PetController;
-import HWANIMALS.src.Model.Pet;
-import HWANIMALS.src.Services.IRepository;
-import HWANIMALS.src.Services.PetRepository;
-import HWANIMALS.src.UserInterface.ConsoleMenu;
+import HWANIMALS.Controller.PetController;
+import HWANIMALS.Model.Pet;
+import HWANIMALS.Services.IRepository;
+import HWANIMALS.Services.PetRepository;
+import HWANIMALS.UserInterface.ConsoleMenu;
 
 public class Program {
     public static void main(String[] args) throws Exception {
