@@ -1,10 +1,10 @@
-package HWANIMALS.src.UserInterface;
+package HWANIMALS.UserInterface;
 
 import java.util.Scanner;
 
-import HWANIMALS.src.Controller.*;
-import HWANIMALS.src.Exceptions.UncorrectDataException;
-import HWANIMALS.src.Model.PetType;
+import HWANIMALS.Controller.*;
+import HWANIMALS.Exceptions.UncorrectDataException;
+import HWANIMALS.Model.PetType;
 
 public class ConsoleMenu {
 

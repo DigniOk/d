@@ -1,4 +1,4 @@
-package HWANIMALS.src;
+package HWANIMALS;
 
 import HWANIMALS.src.Controller.PetController;
 import HWANIMALS.src.Model.Pet;

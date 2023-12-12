@@ -1,4 +1,4 @@
-package HWANIMALS.src.Model;
+package HWANIMALS.Model;
 
 public class Dog extends Pet{
    

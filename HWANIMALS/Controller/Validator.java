@@ -1,12 +1,12 @@
-package HWANIMALS.src.Controller;
+package HWANIMALS.Controller;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Arrays;
-import exceptions.UncorrectDataException;
 
-import HWANIMALS.src.Exceptions.*;
+
+import HWANIMALS.Exceptions.*;
 
 public class Validator {
 

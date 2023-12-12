@@ -1,9 +1,9 @@
-package HWANIMALS.src.Model;
-import HWANIMALS.src.Model.Cat;
-import HWANIMALS.src.Model.Dog;
-import HWANIMALS.src.Model.Hamster;
-import HWANIMALS.src.Model.Pet;
-import HWANIMALS.src.Model.PetType;
+package HWANIMALS.Model;
+import HWANIMALS.Model.Cat;
+import HWANIMALS.Model.Dog;
+import HWANIMALS.Model.Hamster;
+import HWANIMALS.Model.Pet;
+import HWANIMALS.Model.PetType;
 
 public class PetCreator extends Creator {
 

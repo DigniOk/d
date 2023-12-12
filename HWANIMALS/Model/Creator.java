@@ -1,7 +1,7 @@
-package HWANIMALS.src.Model;
+package HWANIMALS.Model;
 
-import HWANIMALS.src.Model.PetType;
-import HWANIMALS.src.Model.Pet;
+import HWANIMALS.Model.PetType;
+import HWANIMALS.Model.Pet;
 
 import java.time.LocalDate;
 

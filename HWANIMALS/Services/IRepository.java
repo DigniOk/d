@@ -1,4 +1,4 @@
-package HWANIMALS.src.Services;
+package HWANIMALS.Services;
 
 import java.util.List;
 

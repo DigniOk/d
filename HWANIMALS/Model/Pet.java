@@ -1,4 +1,4 @@
-package HWANIMALS.src.Model;
+package HWANIMALS.Model;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 

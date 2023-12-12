@@ -1,4 +1,4 @@
-package HWANIMALS.src.Services;
+package HWANIMALS.Services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import HWANIMALS.src.Model.*;
+import HWANIMALS.Model.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
