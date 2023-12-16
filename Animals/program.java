@@ -9,8 +9,8 @@ import Animals.UserInterface.ConsoleMenu;
 public class program {
     public static void main(String[] args) throws Exception {
 
-        IRepository <Pet> myFarm = new PetRepository();
-        PetController controller = new PetController(myFarm);
+        IRepository <Pet> friends_mans = new PetRepository();
+        PetController controller = new PetController(friends_mans);
         new ConsoleMenu (controller).start();
     }
 }    
