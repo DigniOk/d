@@ -9,25 +9,19 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 public class Backup {
-     public static void main(String[] args) throws IOException {
-        // Исходная директория
-        File srcDir = new File("C:/Users/ALEX8/OneDrive/Desktop/program/lessonFive/folder");
-        // Новая директория для резервного копирования
-        File backupDir = new File("C:/Users/ALEX8/OneDrive/Desktop/program/lessonFive/backup");
-        backupDir.mkdirs(); // Создаем новую директорию
-
-        // Получаем список всех файлов в исходной директории
-        File[] files = srcDir.listFiles(new FileFilter() {
+    public static void main(String[] args) throws IOException {
+        File folder = new File("C:/Users/ALEX8/OneDrive/Desktop/program/lessonFive/folder");
+        File backup = new File("C:/Users/ALEX8/OneDrive/Desktop/program/lessonFive/backup");
+        backup.mkdirs();
+        File[] files = folder.listFiles(new FileFilter() {
             @Override
             public boolean accept(File pathname) {
-                return !pathname.isDirectory(); // Не включаем поддиректории
+                return !pathname.isDirectory();
             }
         });
-
-        // Копируем каждый файл в новую директорию
         for (File file : files) {
-            Path dest = Paths.get(backupDir.getPath(), file.getName());
-            Files.copy(file.toPath(), dest, StandardCopyOption.REPLACE_EXISTING);
+            Path del = Paths.get(backup.getPath(), file.getName());
+            Files.copy(file.toPath(), del, StandardCopyOption.REPLACE_EXISTING);
         }
     }
 }
