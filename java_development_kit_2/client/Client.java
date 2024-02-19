@@ -1,7 +1,7 @@
 package java_development_kit_2.client;
 
 import java_development_kit_2.server.Server;
-import java_development_kit_2.client.ClientView;
+
 
 
 public class Client {

@@ -1,12 +1,10 @@
 package java_development_kit_2.client;
 
 import java_development_kit_2.server.ServerWindow;
-import java_development_kit_2.server.Server;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Random;
 
 public class ClientGUI extends JFrame implements ClientView{
     public static final int WIDTH = 400;
@@ -53,10 +51,10 @@ public class ClientGUI extends JFrame implements ClientView{
 
     private Component createHeaderPanel(){
         headerPanel = new JPanel(new GridLayout(2, 3));
-        tfIPAddress = new JTextField("127.0.0.1");
-        tfPort = new JTextField("8189");
-        tfLogin = new JTextField("Ivan Ivanovich");
-        password = new JPasswordField("123456");
+        tfIPAddress = new JTextField("127.0.1.1");
+        tfPort = new JTextField("2341");
+        tfLogin = new JTextField("Nikita Sergeevich");
+        password = new JPasswordField("123321");
         btnLogin = new JButton("login");
         btnLogin.addActionListener(new ActionListener() {
             @Override

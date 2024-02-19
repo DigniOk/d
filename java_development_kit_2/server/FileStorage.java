@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileStorage implements ServerRepository{
-    public static final String LOG_PATH = "src/main/java/server/log.txt";
+    public static final String LOG_PATH = "C:/Users/ALEX8/OneDrive/Desktop/program/java_development_kit_2/server/log.txt";
     public String getFileName(){ return LOG_PATH;}
     public String getHistory() {
         return readLog();
